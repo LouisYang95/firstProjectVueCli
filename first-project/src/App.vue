@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <div class="row">
-      <h1>CRYPTO</h1>
+      <ActualHour />
+
+      <h1 class="text-center">CRYPTO</h1>
       <input
         type="text"
         class="form-control bg-dark text-light rounded-0 border-0 my-4"
@@ -46,6 +48,7 @@
 </template>
 
 <script>
+import ActualHour from "./components/TIMER.vue";
 export default {
   name: "App",
   data() {
@@ -73,6 +76,9 @@ export default {
           coin.symbol.toLowerCase().includes(this.textSearch.toLowerCase())
       );
     },
+  },
+  components: {
+    ActualHour,
   },
 };
 </script>
